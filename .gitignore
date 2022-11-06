@@ -47,3 +47,4 @@ build/
 porymap.*.cfg
 prefabs.json
 tools/poryscript
+data/maps/**/scripts.inc
