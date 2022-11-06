@@ -81,6 +81,7 @@ RAMSCRGEN := tools/ramscrgen/ramscrgen$(EXE)
 GBAFIX    := tools/gbafix/gbafix$(EXE)
 MAPJSON   := tools/mapjson/mapjson$(EXE)
 JSONPROC  := tools/jsonproc/jsonproc$(EXE)
+SCRIPT    := tools/poryscript/poryscript$(EXE)
 
 PERL := perl
 
@@ -203,6 +204,7 @@ mostlyclean: tidy
 	rm -f data/maps/connections.inc data/maps/events.inc data/maps/groups.inc data/maps/headers.inc
 	find data/maps \( -iname 'connections.inc' -o -iname 'events.inc' -o -iname 'header.inc' \) -exec rm {} +
 	rm -f $(AUTO_GEN_TARGETS)
+	rm -f $(patsubst %.pory,%.inc,$(shell find data/ -type f -name '*.pory'))
 
 clean: mostlyclean
 	$(MAKE) clean -C tools/gbagfx
@@ -330,6 +332,9 @@ include json_data_rules.mk
 %.gbapal: %.png ; $(GBAGFX) $< $@ $(GFX_OPTS)
 %.lz:     %     ; $(GBAGFX) $< $@ $(GFX_OPTS)
 %.rl:     %     ; $(GBAGFX) $< $@ $(GFX_OPTS)
+
+data/%.inc: data/%.pory
+	$(SCRIPT) -i $< -o $@ -fw tools/poryscript/font_widths.json
 
 #### Sound Rules ####
 

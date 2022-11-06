@@ -46,3 +46,4 @@ build/
 *.diff
 porymap.*.cfg
 prefabs.json
+tools/poryscript
