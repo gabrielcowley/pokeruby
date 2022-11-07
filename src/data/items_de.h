@@ -35,7 +35,7 @@ const struct Item gItems[] =
     {
         .name = _("HYPERBALL"),
         .itemId = ITEM_ULTRA_BALL,
-        .price = 1200,
+        .price = 300,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_UltraBall,
@@ -51,7 +51,7 @@ const struct Item gItems[] =
     {
         .name = _("SUPERBALL"),
         .itemId = ITEM_GREAT_BALL,
-        .price = 600,
+        .price = 150,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_GreatBall,
@@ -67,7 +67,7 @@ const struct Item gItems[] =
     {
         .name = _("POKéBALL"),
         .itemId = ITEM_POKE_BALL,
-        .price = 200,
+        .price = 50,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_PokeBall,
@@ -195,7 +195,7 @@ const struct Item gItems[] =
     {
         .name = _("PREMIERBALL"),
         .itemId = ITEM_PREMIER_BALL,
-        .price = 200,
+        .price = 50,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_PremierBall,
