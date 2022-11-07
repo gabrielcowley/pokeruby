@@ -99,7 +99,7 @@ const struct Item gItems[] =
     {
         .name = _("NETZBALL"),
         .itemId = ITEM_NET_BALL,
-        .price = 1000,
+        .price = 250,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_NetBall,
@@ -115,7 +115,7 @@ const struct Item gItems[] =
     {
         .name = _("TAUCHBALL"),
         .itemId = ITEM_DIVE_BALL,
-        .price = 1000,
+        .price = 250,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_DiveBall,
@@ -131,7 +131,7 @@ const struct Item gItems[] =
     {
         .name = _("NESTBALL"),
         .itemId = ITEM_NEST_BALL,
-        .price = 1000,
+        .price = 250,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_NestBall,
@@ -147,7 +147,7 @@ const struct Item gItems[] =
     {
         .name = _("WIEDERBALL"),
         .itemId = ITEM_REPEAT_BALL,
-        .price = 1000,
+        .price = 250,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_RepeatBall,
@@ -163,7 +163,7 @@ const struct Item gItems[] =
     {
         .name = _("TIMERBALL"),
         .itemId = ITEM_TIMER_BALL,
-        .price = 1000,
+        .price = 250,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_TimerBall,
@@ -179,7 +179,7 @@ const struct Item gItems[] =
     {
         .name = _("LUXUSBALL"),
         .itemId = ITEM_LUXURY_BALL,
-        .price = 1000,
+        .price = 250,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_LuxuryBall,
