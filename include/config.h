@@ -14,7 +14,7 @@
 // authoritative. These additions are for user convenience based on
 // officially recommended SDK practices for debugging and is therefore
 // still in part authoritative.
-#define NDEBUG
+//#define NDEBUG
 
 // To enable print debugging, comment out "#define NDEBUG". This allows
 // the various AGBPrint functions to be used. (See include/gba/isagbprint.h).
@@ -22,6 +22,9 @@
 // and NoCashGBAPrintf() in libisagbprn.c to use no$gba's own proprietary
 // printing system. Use NoCashGBAPrint() and NoCashGBAPrintf() like you
 // would normally use AGBPrint() and AGBPrintf().
+
+// Note (GC): Use AGB_ASSERT(exp) for debugging
+// If exp is FALSE then the game will crash
 
 #ifndef REVISION
 #define REVISION 0

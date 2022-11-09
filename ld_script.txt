@@ -460,6 +460,7 @@ SECTIONS {
         *libc.a:*libcfunc*.o(.text);
         *libc.a:*syscalls*.o(.text);
         *libc.a:*errno*.o(.text);
+        *libc.a:*impure*.o(.text);
         src/libs/libisagbprn.o(.text);
     } =0
 
@@ -1222,8 +1223,26 @@ SECTIONS {
         src/libs/agb_flash_le.o(.rodata);
         src/libs/siirtc.o(.rodata);
         *libgcc.a:_udivdi3.o(.rodata);
-        *libc.a(.rodata);
-        *libc.a(.data);
+
+        *libc.a:vfprintf.o(.data);
+        *libc.a:vsprintf.o(.data);
+        *libc.a:locale.o(.data);
+        *libc.a:fflush.o(.data);
+        *libc.a:findfp.o(.data);
+        *libc.a:wsetup.o(.data);
+        *libc.a:mallocr.o(.data);
+        *libc.a:freer.o(.data);
+        *libc.a:syscalls.o(.data);
+        *libc.a:errno.o(.data);
+        *libc.a:impure.o(.data);
+        
+        *libc.a:vfprintf.o(.rodata);
+        *libc.a:locale.o(.rodata);
+        *libc.a:dtoa.o(.rodata);
+        *libc.a:mprec.o(.rodata);
+        *libc.a:syscalls.o(.rodata);
+        *libc.a:impure.o(.rodata);
+
         src/libs/libisagbprn.o(.rodata);
     } =0
 
