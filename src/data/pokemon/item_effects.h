@@ -64,6 +64,7 @@ const u8 gItemEffect_OranBerry[]    = {0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 10};
 const u8 gItemEffect_PersimBerry[]  = {0x00, 0x00, 0x00, 0x01, 0x00, 0x00};
 const u8 gItemEffect_LumBerry[]     = {0x00, 0x00, 0x00, 0x3f, 0x00, 0x00};
 const u8 gItemEffect_SitrusBerry[]  = {0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 30};
+const u8 gItemEffect_KingsRock[]    = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 
 const u8 *const gItemEffectTable[] =
 {
@@ -229,7 +230,19 @@ const u8 *const gItemEffectTable[] =
     NULL,
     NULL,
     NULL,
-    NULL
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    gItemEffect_KingsRock
 };
 
 #endif //GUARD_ITEM_EFFECTS_H
