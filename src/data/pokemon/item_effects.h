@@ -68,6 +68,7 @@ const u8 gItemEffect_KingsRock[]    = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 const u8 gItemEffect_MetalCoat[]    = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 const u8 gItemEffect_DragonScale[]  = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 const u8 gItemEffect_UpGrade[]      = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
+const u8 gItemEffect_SeaIncense[]   = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 
 const u8 *const gItemEffectTable[] =
 {
@@ -276,7 +277,9 @@ const u8 *const gItemEffectTable[] =
     NULL,
     NULL,
     NULL,
-    gItemEffect_UpGrade
+    gItemEffect_UpGrade,
+    NULL,
+    gItemEffect_SeaIncense
 };
 
 #endif //GUARD_ITEM_EFFECTS_H
