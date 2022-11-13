@@ -69,6 +69,8 @@ const u8 gItemEffect_MetalCoat[]    = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 const u8 gItemEffect_DragonScale[]  = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 const u8 gItemEffect_UpGrade[]      = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 const u8 gItemEffect_SeaIncense[]   = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
+const u8 gItemEffect_DeepSeaTooth[] = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
+const u8 gItemEffect_DeepSeaScale[] = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 
 const u8 *const gItemEffectTable[] =
 {
@@ -251,8 +253,8 @@ const u8 *const gItemEffectTable[] =
     NULL,
     NULL,
     NULL,
-    NULL,
-    NULL,
+    gItemEffect_DeepSeaTooth,
+    gItemEffect_DeepSeaScale,
     NULL,
     NULL,
     NULL,

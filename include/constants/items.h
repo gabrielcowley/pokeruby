@@ -379,7 +379,7 @@
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
 
 // Check if the item is one that can be used on a Pokemon.
-#define ITEM_HAS_EFFECT(item) (((item) >= ITEM_POTION && (item) <= ITEM_0B2) || (item) == ITEM_KINGS_ROCK || (item) == ITEM_METAL_COAT || (item) == ITEM_DRAGON_SCALE || (item) == ITEM_UP_GRADE || (item) == ITEM_SEA_INCENSE)
+#define ITEM_HAS_EFFECT(item) (((item) >= ITEM_POTION && (item) <= ITEM_0B2) || (item) == ITEM_KINGS_ROCK || (item) == ITEM_METAL_COAT || (item) == ITEM_DRAGON_SCALE || (item) == ITEM_UP_GRADE || (item) == ITEM_SEA_INCENSE || (item) == ITEM_DEEP_SEA_TOOTH || (item) == ITEM_DEEP_SEA_SCALE)
 
 #define IS_ITEM_MAIL(item) ((item) >= ITEM_ORANGE_MAIL && (item) <= ITEM_RETRO_MAIL)
 
