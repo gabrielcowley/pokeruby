@@ -19,7 +19,7 @@ const struct Item gItems[] =
     {
         .name = _("MEISTERBALL"),
         .itemId = ITEM_MASTER_BALL,
-        .price = 0,
+        .price = 80000,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_MasterBall,
@@ -2995,7 +2995,7 @@ const struct Item gItems[] =
     {
         .name = _("KING-STEIN"),
         .itemId = ITEM_KINGS_ROCK,
-        .price = 100,
+        .price = 1500,
         .holdEffect = HOLD_EFFECT_FLINCH,
         .holdEffectParam = 10,
         .description = gItemDescription_KingsRock,
@@ -3075,7 +3075,7 @@ const struct Item gItems[] =
     {
         .name = _("ABYSSZAHN"),
         .itemId = ITEM_DEEP_SEA_TOOTH,
-        .price = 200,
+        .price = 1500,
         .holdEffect = HOLD_EFFECT_DEEP_SEA_TOOTH,
         .holdEffectParam = 0,
         .description = gItemDescription_DeepSeaTooth,
@@ -3091,7 +3091,7 @@ const struct Item gItems[] =
     {
         .name = _("ABYSSPLATTE"),
         .itemId = ITEM_DEEP_SEA_SCALE,
-        .price = 200,
+        .price = 1500,
         .holdEffect = HOLD_EFFECT_DEEP_SEA_SCALE,
         .holdEffectParam = 0,
         .description = gItemDescription_DeepSeaScale,
@@ -3187,7 +3187,7 @@ const struct Item gItems[] =
     {
         .name = _("METALLMANTEL"),
         .itemId = ITEM_METAL_COAT,
-        .price = 100,
+        .price = 1500,
         .holdEffect = HOLD_EFFECT_STEEL_POWER,
         .holdEffectParam = 10,
         .description = gItemDescription_MetalCoat,
