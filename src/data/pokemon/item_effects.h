@@ -67,6 +67,7 @@ const u8 gItemEffect_SitrusBerry[]  = {0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 30};
 const u8 gItemEffect_KingsRock[]    = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 const u8 gItemEffect_MetalCoat[]    = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 const u8 gItemEffect_DragonScale[]  = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
+const u8 gItemEffect_UpGrade[]      = {0x00, 0x00, 0x00, 0x00, 0x80, 0x00};
 
 const u8 *const gItemEffectTable[] =
 {
@@ -258,7 +259,24 @@ const u8 *const gItemEffectTable[] =
     NULL,
     gItemEffect_MetalCoat,
     NULL,
-    gItemEffect_DragonScale
+    gItemEffect_DragonScale,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    gItemEffect_UpGrade
 };
 
 #endif //GUARD_ITEM_EFFECTS_H
