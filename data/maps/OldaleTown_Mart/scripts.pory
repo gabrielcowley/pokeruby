@@ -1,59 +1,45 @@
-raw `
-OldaleTown_Mart_MapScripts:: @ 8152F78
-	.byte 0
+mapscripts OldaleTown_Mart_MapScripts {}
 
-OldaleTown_Mart_EventScript_152F79:: @ 8152F79
+script OldaleTown_Mart_EventScript_Employee {
 	lock
 	faceplayer
-	message Text_HowMayIServeYou
+	message(Text_HowMayIServeYou)
 	waitmessage
-	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_EventScript_152FA8
-	pokemart OldaleTown_Mart_Items1
-	msgbox Text_PleaseComeAgain, MSGBOX_DEFAULT
+	if (flag(FLAG_ADVENTURE_STARTED)) {
+		pokemart(OldaleTown_Mart_Items_AfterAdventureStarted)
+	} else {
+		pokemart(OldaleTown_Mart_Items_BeforeAdventureStarted)
+	}
+	msgbox(Text_PleaseComeAgain)
 	release
-	end
+}
 
-	.align 2
-OldaleTown_Mart_Items1:: @ 8152F9C
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_NONE
-	release
-	end
+mart OldaleTown_Mart_Items_BeforeAdventureStarted {
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+}
 
-OldaleTown_Mart_EventScript_152FA8:: @ 8152FA8
-	pokemart OldaleTown_Mart_Items2
-	msgbox Text_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
+mart OldaleTown_Mart_Items_AfterAdventureStarted {
+	ITEM_POKE_BALL
+	ITEM_POTION
+	ITEM_ANTIDOTE
+	ITEM_PARALYZE_HEAL
+	ITEM_AWAKENING
+}
 
-	.align 2
-OldaleTown_Mart_Items2:: @ 8152FB8
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_NONE
-	release
-	end
-
-OldaleTown_Mart_EventScript_152FC6:: @ 8152FC6
+script OldaleTown_Mart_EventScript_Woman {
 	lock
 	faceplayer
-	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_EventScript_152FDB
-	msgbox OldaleTown_Mart_Text_174A8A, MSGBOX_DEFAULT
+	if (flag(FLAG_ADVENTURE_STARTED)) {
+		msgbox(OldaleTown_Mart_Text_174ACB)
+	} else {
+		msgbox(OldaleTown_Mart_Text_174A8A)
+	}
 	release
-	end
+}
 
-OldaleTown_Mart_EventScript_152FDB:: @ 8152FDB
-	msgbox OldaleTown_Mart_Text_174ACB, MSGBOX_DEFAULT
-	release
-	end
-
-OldaleTown_Mart_EventScript_152FE5:: @ 8152FE5
-	msgbox OldaleTown_Mart_Text_174B10, MSGBOX_NPC
-	end
-`
+script OldaleTown_Mart_EventScript_Boy {
+	msgbox(OldaleTown_Mart_Text_174B10, MSGBOX_NPC)
+}
