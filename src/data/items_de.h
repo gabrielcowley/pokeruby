@@ -19,7 +19,7 @@ const struct Item gItems[] =
     {
         .name = _("MEISTERBALL"),
         .itemId = ITEM_MASTER_BALL,
-        .price = 65000,
+        .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
         .holdEffectParam = 0,
         .description = gItemDescription_MasterBall,

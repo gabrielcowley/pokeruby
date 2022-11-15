@@ -9,10 +9,8 @@ script OldaleTown_Mart_EventScript_Employee {
 		callnative(StoreBadgeCountAsResult)
 		if (var(VAR_RESULT) < 6) {
 			pokemart(OldaleTown_Mart_Items_AfterAdventureStarted)
-		} elif (var(VAR_RESULT) == 6 || var(VAR_RESULT) == 7) {
-			pokemart(OldaleTown_Mart_Items_SixBadges)
 		} else {
-			pokemart(OldaleTown_Mart_Items_EightBadges)
+			pokemart(OldaleTown_Mart_Items_SixBadges)
 		}
 	} else {
 		pokemart(OldaleTown_Mart_Items_BeforeAdventureStarted)
@@ -40,26 +38,6 @@ mart OldaleTown_Mart_Items_SixBadges {
 	ITEM_POKE_BALL
 	ITEM_GREAT_BALL
 	ITEM_ULTRA_BALL
-	ITEM_POTION
-	ITEM_HYPER_POTION
-	ITEM_MAX_POTION
-	ITEM_ANTIDOTE
-	ITEM_PARALYZE_HEAL
-	ITEM_AWAKENING
-	ITEM_FULL_RESTORE
-	ITEM_REVIVE
-	ITEM_FULL_HEAL
-	ITEM_ESCAPE_ROPE
-	ITEM_REPEL
-	ITEM_SUPER_REPEL
-	ITEM_MAX_REPEL
-}
-
-mart OldaleTown_Mart_Items_EightBadges {
-	ITEM_POKE_BALL
-	ITEM_GREAT_BALL
-	ITEM_ULTRA_BALL
-	ITEM_MASTER_BALL
 	ITEM_POTION
 	ITEM_HYPER_POTION
 	ITEM_MAX_POTION
