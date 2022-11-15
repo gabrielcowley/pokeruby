@@ -115,6 +115,10 @@ u8 GetBadgeCount(void)
     return badgeCount;
 }
 
+void StoreBadgeCountAsResult(void) {
+    gSpecialVar_Result = GetBadgeCount();
+}
+
 u16 GetPokedexSeenCount()
 {
     u16 pokedexSeenCount;
