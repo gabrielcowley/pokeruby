@@ -67,3 +67,52 @@ script OldaleTown_Mart_EventScript_Woman {
 script OldaleTown_Mart_EventScript_Boy {
 	msgbox(OldaleTown_Mart_Text_174B10, MSGBOX_NPC)
 }
+
+// TODO move these to a common file
+script OldaleTown_Mart_EventScript_MasterBallMerchant {
+	lock
+	faceplayer
+	if (!flag(FLAG_MET_MASTERBALL_MERCHANTS)) {
+		msgbox(OldaleTown_Mart_Text_MasterBallMerchant_FirstTime, MSGBOX_NPC)
+		setflag(FLAG_MET_MASTERBALL_MERCHANTS)
+	}
+	checkmoney(80000, 0)
+	if (var(VAR_RESULT)) {
+		showmoneybox(0, 0)
+		msgbox(OldaleTown_Mart_Text_MasterBallMerchant_HaveSufficientMoney, MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			call(OldaleTown_Mart_WouldLikeMasterBall)
+		}
+		hidemoneybox(0, 0)
+	} else {
+		msgbox(OldaleTown_Mart_Text_MasterBallMerchant_DoNotHaveSufficientMoney, MSGBOX_NPC)
+	}
+	release
+}
+
+script OldaleTown_Mart_WouldLikeMasterBall {
+	checkitemspace(ITEM_MASTER_BALL, 1)
+	if (var(VAR_RESULT)) {
+		removemoney(80000, 0)
+		updatemoneybox(0, 0)
+	}
+	giveitem(ITEM_MASTER_BALL)
+	if (!var(VAR_RESULT)) {
+		msgbox(Text_TooBadBagIsFull, MSGBOX_DEFAULT)
+	}
+}
+
+text OldaleTown_Mart_Text_MasterBallMerchant_FirstTime {
+	format("Oh! Are you {PLAYER}?\p"
+		"I heard you have all eight gym badges! That means that you're eligible to buy Master Balls.\p"
+		"I should warn you though - they are not cheap.")
+}
+
+text OldaleTown_Mart_Text_MasterBallMerchant_HaveSufficientMoney {
+	format("Would you like to buy a Master Ball? It costs ¥80,000.")
+}
+
+text OldaleTown_Mart_Text_MasterBallMerchant_DoNotHaveSufficientMoney {
+	format("You need ¥80,000 to buy a Master Ball.\p"
+		"Please come back when you have enough!")
+}

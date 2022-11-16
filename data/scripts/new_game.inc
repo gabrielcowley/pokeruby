@@ -214,5 +214,6 @@ EventScript_ResetAllMapFlags:: @ 819FA81
 	setflag FLAG_HIDE_RIVAL_OLDALE_TOWN
 	setflag FLAG_HIDE_WALLY_DEFEATED_VICTORY_ROAD
 	setflag FLAG_HIDE_BOY_ROUTE101
+	setflag FLAG_HIDE_MASTERBALL_MERCHANTS
 	call EventScript_ResetAllBerryTrees
 	end
