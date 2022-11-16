@@ -1165,6 +1165,7 @@ EventScript_1A14CA::
 Common_EventScript_Return:: @ 81A14DC
 	return
 
+	.include "data/scripts/master_ball_merchant.inc"
 	.include "data/scripts/debug.inc"
 	.include "data/scripts/berry_tree.inc"
 	.include "data/text/berry_tree.inc"

@@ -1,0 +1,49 @@
+script(global) Common_EventScript_MasterBallMerchant {
+	lock
+	faceplayer
+	if (!flag(FLAG_MET_MASTERBALL_MERCHANTS)) {
+		msgbox(FirstTime)
+		setflag(FLAG_MET_MASTERBALL_MERCHANTS)
+	}
+	checkmoney(80000, 0)
+	if (var(VAR_RESULT)) {
+		showmoneybox(0, 0)
+		nop
+		msgbox(HaveSufficientMoney, MSGBOX_YESNO)
+		if (var(VAR_RESULT) == YES) {
+			call(WouldLikeMasterBall)
+		}
+		hidemoneybox(0, 0)
+	} else {
+		msgbox(DoNotHaveSufficientMoney)
+	}
+	release
+}
+
+script(local) WouldLikeMasterBall {
+	checkitemspace(ITEM_MASTER_BALL, 1)
+	if (var(VAR_RESULT)) {
+		removemoney(80000, 0)
+		updatemoneybox(0, 0)
+		nop
+	}
+	giveitem(ITEM_MASTER_BALL)
+	if (!var(VAR_RESULT)) {
+		msgbox(Text_TooBadBagIsFull, MSGBOX_DEFAULT)
+	}
+}
+
+text(local) FirstTime {
+	format("Oh! Are you {PLAYER}?\p"
+		"I heard you have all eight gym badges! That means that you're eligible to buy Master Balls.\p"
+		"I should warn you though - they are not cheap.")
+}
+
+text(local) HaveSufficientMoney {
+	format("Would you like to buy a Master Ball? It costs ¥80,000.")
+}
+
+text(local) DoNotHaveSufficientMoney {
+	format("You need ¥80,000 to buy a Master Ball.\p"
+		"Please come back when you have enough!")
+}
