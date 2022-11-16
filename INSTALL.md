@@ -38,6 +38,8 @@ To set up the repository:
 
 	cd ../pokeruby
 
+Also, obtain `poryscript.exe` and `font_widths.json` from https://github.com/huderlem/poryscript/releases and copy them to `tools/poryscript`. The version used at time of writing is `2.14.0`.
+
 To build Pokémon Ruby:
 
 	make ruby
