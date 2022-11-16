@@ -73,19 +73,20 @@ script OldaleTown_Mart_EventScript_MasterBallMerchant {
 	lock
 	faceplayer
 	if (!flag(FLAG_MET_MASTERBALL_MERCHANTS)) {
-		msgbox(OldaleTown_Mart_Text_MasterBallMerchant_FirstTime, MSGBOX_NPC)
+		msgbox(OldaleTown_Mart_Text_MasterBallMerchant_FirstTime)
 		setflag(FLAG_MET_MASTERBALL_MERCHANTS)
 	}
 	checkmoney(80000, 0)
 	if (var(VAR_RESULT)) {
 		showmoneybox(0, 0)
+		nop
 		msgbox(OldaleTown_Mart_Text_MasterBallMerchant_HaveSufficientMoney, MSGBOX_YESNO)
 		if (var(VAR_RESULT) == YES) {
 			call(OldaleTown_Mart_WouldLikeMasterBall)
 		}
 		hidemoneybox(0, 0)
 	} else {
-		msgbox(OldaleTown_Mart_Text_MasterBallMerchant_DoNotHaveSufficientMoney, MSGBOX_NPC)
+		msgbox(OldaleTown_Mart_Text_MasterBallMerchant_DoNotHaveSufficientMoney)
 	}
 	release
 }
@@ -95,6 +96,7 @@ script OldaleTown_Mart_WouldLikeMasterBall {
 	if (var(VAR_RESULT)) {
 		removemoney(80000, 0)
 		updatemoneybox(0, 0)
+		nop
 	}
 	giveitem(ITEM_MASTER_BALL)
 	if (!var(VAR_RESULT)) {
