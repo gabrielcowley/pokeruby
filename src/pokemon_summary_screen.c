@@ -2085,6 +2085,7 @@ static void SummaryScreen_PrintPokemonInfo(struct Pokemon *mon)
         sub_80A1918(i, 1);
 
     Menu_EraseWindowRect(11, 9, 28, 12);
+    Menu_EraseWindowRect(15, 6, 18, 7);
     if (GetMonData(mon, MON_DATA_IS_EGG))
     {
         buffer = gStringVar1;
@@ -2098,7 +2099,7 @@ static void SummaryScreen_PrintPokemonInfo(struct Pokemon *mon)
         Menu_PrintText(gStringVar1, 11, 4);
 
         SummaryScreen_PrintColoredTextPixelCoords(gOtherText_FiveQuestions, 13, 193, 32, 1);
-        SummaryScreen_DrawTypeIcon(TYPE_MYSTERY, 120, 48, 0);
+        Menu_PrintText(gOtherText_FiveQuestions, 15, 6);
 
         friendship = GetMonData(mon, MON_DATA_FRIENDSHIP);
         if (friendship <= 5)
