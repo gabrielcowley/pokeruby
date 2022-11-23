@@ -1170,6 +1170,7 @@ static const struct SearchOptionText sDexSearchTypeOptions[] =
     {DexText_Terminator5, gTypeNames[TYPE_BUG]},
     {DexText_Terminator5, gTypeNames[TYPE_GHOST]},
     {DexText_Terminator5, gTypeNames[TYPE_STEEL]},
+    {DexText_Terminator5, gTypeNames[TYPE_FAIRY]},
     {DexText_Terminator5, gTypeNames[TYPE_FIRE]},
     {DexText_Terminator5, gTypeNames[TYPE_WATER]},
     {DexText_Terminator5, gTypeNames[TYPE_GRASS]},
@@ -1182,13 +1183,13 @@ static const struct SearchOptionText sDexSearchTypeOptions[] =
 };
 static const u8 sPokedexModes[] = {0, 1};
 static const u8 sOrderOptions[] = {0, 1, 2, 3, 4, 5};
-static const u8 sDexSearchTypeIds[] = {0xFF, 0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17};
+static const u8 sDexSearchTypeIds[] = {0xFF, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17};
 static const struct SearchOption sSearchOptions[] =
 {
     { sDexSearchNameOptions,  6,  7, 10},
     { sDexSearchColorOptions,  8,  9, 11},
-    { sDexSearchTypeOptions, 10, 11, 18},
-    { sDexSearchTypeOptions, 12, 13, 18},
+    { sDexSearchTypeOptions, 10, 11, 19},
+    { sDexSearchTypeOptions, 12, 13, 19},
     { sDexOrderOptions,  4,  5,  6},
     { sDexModeOptions,  2,  3,  2},
 };

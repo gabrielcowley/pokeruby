@@ -8,7 +8,7 @@ gTypeNames:: @ 81F9870
 	.string "BUG$", 7
 	.string "GHOST$", 7
 	.string "STEEL$", 7
-	.string "???$", 7
+	.string "FAIRY$", 7
 	.string "FIRE$", 7
 	.string "WATER$", 7
 	.string "GRASS$", 7

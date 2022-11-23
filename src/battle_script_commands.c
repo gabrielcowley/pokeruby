@@ -6840,13 +6840,6 @@ static void atk90_tryconversiontypechange(void)
     for (checked_move = 0; checked_move < valid_moves; checked_move++)
     {
         moveType = gBattleMoves[gBattleMons[gBattlerAttacker].moves[checked_move]].type;
-        if (moveType == TYPE_MYSTERY)
-        {
-            if (gBattleMons[gBattlerAttacker].type1 == TYPE_GHOST || gBattleMons[gBattlerAttacker].type2 == TYPE_GHOST)
-                moveType = TYPE_GHOST;
-            else
-                moveType = TYPE_NORMAL;
-        }
         if (moveType != gBattleMons[gBattlerAttacker].type1 && moveType != gBattleMons[gBattlerAttacker].type2)
             break;
     }
@@ -6863,13 +6856,6 @@ static void atk90_tryconversiontypechange(void)
             while ((checked_move = Random() & 3) >= valid_moves);
 
             moveType = gBattleMoves[gBattleMons[gBattlerAttacker].moves[checked_move]].type;
-            if (moveType == TYPE_MYSTERY)
-            {
-                if (gBattleMons[gBattlerAttacker].type1 == TYPE_GHOST || gBattleMons[gBattlerAttacker].type2 == TYPE_GHOST)
-                    moveType = TYPE_GHOST;
-                else
-                    moveType = TYPE_NORMAL;
-            }
         } while (moveType == gBattleMons[gBattlerAttacker].type1 || moveType == gBattleMons[gBattlerAttacker].type2);
 
         gBattleMons[gBattlerAttacker].type1 = moveType;
@@ -8536,7 +8522,7 @@ static void atkC1_hiddenpowercalc(void)
 	gDynamicBasePower = 30 + (power * 40 / 63);
 
 	gBattleStruct->dynamicMoveType = ((type * 15) / 63) + 1;
-	if (gBattleStruct->dynamicMoveType >= TYPE_MYSTERY)
+	if (gBattleStruct->dynamicMoveType >= TYPE_FAIRY)
 		gBattleStruct->dynamicMoveType++;
 
 	gBattleStruct->dynamicMoveType |= 0xC0;

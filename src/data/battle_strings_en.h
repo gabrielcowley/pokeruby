@@ -831,7 +831,7 @@ const u8 BattleText_Rock[] = _("a ROCK move");
 const u8 BattleText_Bug[] = _("a BUG move");
 const u8 BattleText_Ghost[] = _("a GHOST move");
 const u8 BattleText_Steel[] = _("a STEEL move");
-const u8 BattleText_Typeless[] = _("a ??? move");
+const u8 BattleText_Fairy[] = _("a FAIRY move");
 const u8 BattleText_Fire[] = _("a FIRE move");
 const u8 BattleText_Water[] = _("a WATER move");
 const u8 BattleText_Grass[] = _("a GRASS move");
@@ -1600,7 +1600,7 @@ const u8 *const gUnknown_08401674[] =
     BattleText_Bug,
     BattleText_Ghost,
     BattleText_Steel,
-    BattleText_Typeless,
+    BattleText_Fairy,
     BattleText_Fire,
     BattleText_Water,
     BattleText_Grass,
