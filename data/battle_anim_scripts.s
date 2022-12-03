@@ -373,6 +373,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
+	.4byte Move_DAZZLING_GLEAM
 	.4byte PoundCopy
 
 	.align 2
@@ -9912,6 +9913,12 @@ _81D5B99:
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_TARGET, 2, 0, 8, 1
 	playsewithpan SE_M_ICY_WIND, SOUND_PAN_TARGET
 	call Effect_LightIceDamage
+	waitforvisualfinish
+	end
+
+Move_DAZZLING_GLEAM:
+	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
+	createvisualtask sub_80E388C, 2
 	waitforvisualfinish
 	end
 

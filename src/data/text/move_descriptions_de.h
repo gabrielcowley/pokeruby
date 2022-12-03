@@ -1413,6 +1413,10 @@ static const u8 MoveDescription_PsychoBoost[] = _(
     "Angriff mit voller Kraft.\n"
     "SPEZ. ANGR. sinkt deutlich.");
 
+static const u8 MoveDescription_DazzlingGleam[] = _(
+    "Attacks with a powerful\n"
+    "flash.");
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -1768,4 +1772,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_WaterPulse,
     MoveDescription_DoomDesire,
     MoveDescription_PsychoBoost,
+    MoveDescription_DazzlingGleam,
 };

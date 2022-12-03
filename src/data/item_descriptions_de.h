@@ -1349,6 +1349,11 @@ static const u8 gItemDescription_TM50[] = _(
     "aber senkt SP.\n"
     "ANGR. enorm.");
 
+static const u8 gItemDescription_TM51[] = _(
+    "Damages foes by\n"
+    "emitting a powerful\n"
+    "flash.");
+
 static const u8 gItemDescription_HM01[] = _(
     "Gegner wird mit\n"
     "klingenscharfen\n"

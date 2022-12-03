@@ -1,4 +1,4 @@
-const u8 gMoveNames[][13] = {
+const u8 gMoveNames[][14] = {
     [MOVE_NONE] = _("-$$$$$$"),
     [MOVE_POUND] = _("POUND"),
     [MOVE_KARATE_CHOP] = _("KARATE CHOP"),
@@ -354,4 +354,5 @@ const u8 gMoveNames[][13] = {
     [MOVE_WATER_PULSE] = _("WATER PULSE"),
     [MOVE_DOOM_DESIRE] = _("DOOM DESIRE"),
     [MOVE_PSYCHO_BOOST] = _("PSYCHO BOOST"),
+    [MOVE_DAZZLING_GLEAM] = _("DAZZLINGGLEAM"),
 };

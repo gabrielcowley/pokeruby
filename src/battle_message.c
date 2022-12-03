@@ -366,7 +366,7 @@ void BufferStringBattle(u16 stringID)
         break;
     case 4: // pokemon used a move msg
         ChooseMoveUsedParticle(gBattleTextBuff1);
-        if (gStringInfo->currentMove > 0x162)
+        if (gStringInfo->currentMove >= NUM_MOVES)
             StringCopy(gBattleTextBuff2, gUnknown_08401674[gBattleStruct->stringMoveType]);
         else
             StringCopy(gBattleTextBuff2, gMoveNames[gStringInfo->currentMove]);
