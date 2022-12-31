@@ -85,7 +85,7 @@ for input_line_idx in range(1, len(input_lines)):
 
 tm_insertions_sorted = sorted(tm_insertion_idxs, reverse=True)
 
-for tm_insertion_idx in tm_insertion_idxs:
+for tm_insertion_idx in tm_insertions_sorted:
     (lines_to_insert, command) = get_lines_to_insert(tm, learnset_lines[tm_insertion_idx], learnset_lines[tm_insertion_idx + 1], learnset_lines[tm_insertion_idx - 1])
     if command == 'delete this':
         learnset_lines = learnset_lines[:tm_insertion_idx] + lines_to_insert + learnset_lines[tm_insertion_idx + 1:]
