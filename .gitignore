@@ -49,3 +49,4 @@ prefabs.json
 tools/poryscript
 data/maps/**/scripts.inc
 data/scripts/*.inc
+util-scripts/*.txt
