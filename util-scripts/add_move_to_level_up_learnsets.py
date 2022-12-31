@@ -22,10 +22,10 @@ def overwrite_file(path: str, contents: str):
         f.write(contents)
 
 def read_input() -> list[str]:
-    return read_file(os.path.join(os.path.dirname(__file__), 'level_up_learnset_input.txt'))
+    return read_file(input_path)
 
 def read_level_up_learnsets() -> list[str]:
-    return read_file(os.path.join(os.path.dirname(__file__), '..', 'src', 'data', 'pokemon', 'level_up_learnsets.h'))
+    return read_file(level_up_learnsets_path)
 
 def get_index_of_move_insertion(learnset_lines: list[str], pokemon: str, level: int) -> int:
     i = learnset_lines.index(f'const u16 g{pokemon}LevelUpLearnset[] = {{\n') + 1
