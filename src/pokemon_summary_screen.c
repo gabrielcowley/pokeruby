@@ -348,7 +348,7 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIE
     [TYPE_BUG] = 14,
     [TYPE_GHOST] = 13,
     [TYPE_STEEL] = 12,
-    [TYPE_FAIRY] = 13,
+    [TYPE_FAIRY] = 15,
     [TYPE_FIRE] = 12,
     [TYPE_WATER] = 13,
     [TYPE_GRASS] = 14,
