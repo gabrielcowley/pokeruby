@@ -374,6 +374,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
 	.4byte Move_DAZZLING_GLEAM
+	.4byte Move_PLAY_ROUGH
 	.4byte PoundCopy
 
 	.align 2
@@ -9921,6 +9922,9 @@ Move_DAZZLING_GLEAM:
 	createvisualtask sub_80E388C, 2
 	waitforvisualfinish
 	end
+
+Move_PLAY_ROUGH:
+	goto Move_SUBMISSION
 
 PoundCopy: @ 81D5C05
 	loadspritegfx ANIM_TAG_IMPACT

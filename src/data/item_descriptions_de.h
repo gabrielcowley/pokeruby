@@ -1354,6 +1354,11 @@ static const u8 gItemDescription_TM51[] = _(
     "emitting a powerful\n"
     "flash.");
 
+static const u8 gItemDescription_TM52[] = _(
+    "Plays rough with\n"
+    "the foe. May lower\n"
+    "ATTACK.");
+
 static const u8 gItemDescription_HM01[] = _(
     "Gegner wird mit\n"
     "klingenscharfen\n"

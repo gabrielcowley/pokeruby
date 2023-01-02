@@ -1418,6 +1418,10 @@ static const u8 MoveDescription_DazzlingGleam[] = _(
     "Attacks with a powerful\n"
     "flash.");
 
+static const u8 MoveDescription_PlayRough[] = _(
+    "Plays rough with the foe\n"
+    "and may lower ATTACK.");
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -1774,4 +1778,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_DoomDesire,
     MoveDescription_PsychoBoost,
     MoveDescription_DazzlingGleam,
+    MoveDescription_PlayRough,
 };

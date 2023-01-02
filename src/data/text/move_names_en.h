@@ -355,4 +355,5 @@ const u8 gMoveNames[][14] = {
     [MOVE_DOOM_DESIRE] = _("DOOM DESIRE"),
     [MOVE_PSYCHO_BOOST] = _("PSYCHO BOOST"),
     [MOVE_DAZZLING_GLEAM] = _("DAZZLINGGLEAM"),
+    [MOVE_PLAY_ROUGH] = _("PLAY ROUGH"),
 };
