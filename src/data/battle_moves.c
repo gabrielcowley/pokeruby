@@ -4284,7 +4284,7 @@ const struct BattleMove gBattleMoves[] = {
         .accuracy = 90,
         .pp = 10,
         .secondaryEffectChance = 10,
-        .target = TARGET_ALL_EXCEPT_USER,
+        .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
     },
