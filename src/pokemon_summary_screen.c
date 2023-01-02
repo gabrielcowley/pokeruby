@@ -339,29 +339,29 @@ static const struct SpriteTemplate sSpriteTemplate_MoveTypes =
 
 static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIES_COUNT] =
 {
-    [TYPE_NORMAL] = 13,
-    [TYPE_FIGHTING] = 13,
-    [TYPE_FLYING] = 14,
-    [TYPE_POISON] = 14,
-    [TYPE_GROUND] = 13,
-    [TYPE_ROCK] = 13,
-    [TYPE_BUG] = 15,
-    [TYPE_GHOST] = 14,
-    [TYPE_STEEL] = 13,
-    [TYPE_FAIRY] = 14,
-    [TYPE_FIRE] = 13,
-    [TYPE_WATER] = 14,
-    [TYPE_GRASS] = 15,
-    [TYPE_ELECTRIC] = 13,
-    [TYPE_PSYCHIC] = 14,
-    [TYPE_ICE] = 14,
-    [TYPE_DRAGON] = 15,
-    [TYPE_DARK] = 13,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = 13,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = 14,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = 14,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_SMART] = 15,
-    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_TOUGH] = 13,
+    [TYPE_NORMAL] = 12,
+    [TYPE_FIGHTING] = 12,
+    [TYPE_FLYING] = 13,
+    [TYPE_POISON] = 13,
+    [TYPE_GROUND] = 12,
+    [TYPE_ROCK] = 12,
+    [TYPE_BUG] = 14,
+    [TYPE_GHOST] = 13,
+    [TYPE_STEEL] = 12,
+    [TYPE_FAIRY] = 15,
+    [TYPE_FIRE] = 12,
+    [TYPE_WATER] = 13,
+    [TYPE_GRASS] = 14,
+    [TYPE_ELECTRIC] = 12,
+    [TYPE_PSYCHIC] = 13,
+    [TYPE_ICE] = 13,
+    [TYPE_DRAGON] = 14,
+    [TYPE_DARK] = 12,
+    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = 12,
+    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = 13,
+    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = 13,
+    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_SMART] = 14,
+    [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_TOUGH] = 12,
 };
 static const struct OamData sOamData_83C11F0 = {
     .y = 0,
@@ -886,7 +886,7 @@ static bool8 LoadPokemonSummaryScreenGraphics(void)
         LoadCompressedObjectPalette(&sUnknown_083C1278);
         break;
     case 12:
-        LoadCompressedPalette(gMoveTypes_Pal, 464, 96);
+        LoadCompressedPalette(gMoveTypes_Pal, 448, 128);
         pssData.loadGfxState = 0;
         return TRUE;
     }
