@@ -775,7 +775,8 @@ const u16 gEggMoves[] = {
               MOVE_METAL_CLAW,
               MOVE_FAKE_TEARS,
               MOVE_YAWN,
-              MOVE_SLEEP_TALK),
+              MOVE_SLEEP_TALK,
+              MOVE_PLAY_ROUGH),
 
     egg_moves(SLUGMA,
               MOVE_ACID_ARMOR,
@@ -849,7 +850,8 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_SNORE,
               MOVE_COUNTER,
-              MOVE_FISSURE),
+              MOVE_FISSURE,
+              MOVE_PLAY_ROUGH),
 
     egg_moves(STANTLER,
               MOVE_SPITE,
@@ -938,7 +940,8 @@ const u16 gEggMoves[] = {
               MOVE_POISON_FANG,
               MOVE_COVET,
               MOVE_LEER,
-              MOVE_YAWN),
+              MOVE_YAWN,
+              MOVE_PLAY_ROUGH),
 
     egg_moves(ZIGZAGOON,
               MOVE_CHARM,
@@ -1172,7 +1175,8 @@ const u16 gEggMoves[] = {
               MOVE_AGILITY,
               MOVE_HAZE,
               MOVE_PURSUIT,
-              MOVE_RAGE),
+              MOVE_RAGE,
+              MOVE_PLAY_ROUGH),
 
     egg_moves(DUSKULL,
               MOVE_IMPRISON,
@@ -1231,7 +1235,8 @@ const u16 gEggMoves[] = {
               MOVE_DOUBLE_EDGE,
               MOVE_MAGIC_COAT,
               MOVE_CURSE,
-              MOVE_SUBSTITUTE),
+              MOVE_SUBSTITUTE,
+              MOVE_PLAY_ROUGH),
 
     egg_moves(SHUPPET,
               MOVE_DISABLE,
