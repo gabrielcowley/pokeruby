@@ -1359,6 +1359,10 @@ static const u8 gItemDescription_TM52[] = _(
     "the foe. May lower\n"
     "ATTACK.");
 
+static const u8 gItemDescription_TM53[] = _(
+    "Steals the target's\n"
+    "energy with a kiss.");
+
 static const u8 gItemDescription_HM01[] = _(
     "Gegner wird mit\n"
     "klingenscharfen\n"

@@ -1222,8 +1222,12 @@
 	.byte 0xf7
 	.endm
 
-	.macro trainerslideout bank
+	.macro negativedamagedrainingkiss
 	.byte 0xf8
+	.endm
+
+	.macro trainerslideout bank
+	.byte 0xf9
 	.byte \bank
 	.endm
 

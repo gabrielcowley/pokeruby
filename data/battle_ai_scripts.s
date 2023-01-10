@@ -752,6 +752,7 @@ AI_CheckViability: @ 81DA86D
 	if_effect EFFECT_WATER_SPORT, AI_CV_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
 	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance
+	if_effect EFFECT_DRAINING_KISS, AI_CV_DrainingKiss
 	end
 
 AI_CV_Sleep: @ 81DAB44
@@ -2691,6 +2692,18 @@ AI_CV_DragonDance2: @ 81DBE8E
 	score +1
 
 AI_CV_DragonDance_End: @ 81DBE96
+	end
+
+AI_CV_DrainingKiss: @ https://bulbapedia.bulbagarden.net/wiki/Same-type_attack_bonus
+	if_damage_bonus 50, AI_CV_DrainingKissEncourageMaybe
+	if_damage_bonus 25, AI_CV_DrainingKissEncourageMaybe
+	jump AI_CV_DrainingKiss_End
+
+AI_CV_DrainingKissEncourageMaybe:
+	if_random_less_than 50, AI_CV_DrainingKiss_End
+	score -3
+
+AI_CV_DrainingKiss_End:
 	end
 
 AI_TryToFaint: @ 81DBE97

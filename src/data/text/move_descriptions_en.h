@@ -1422,6 +1422,10 @@ static const u8 MoveDescription_PlayRough[] = _(
     "Plays rough with the foe\n"
     "and may lower ATTACK.");
 
+static const u8 MoveDescription_DrainingKiss[] = _(
+    "An attack that absorbs over\n"
+    "half the damage inflicted.");
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -1779,4 +1783,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_PsychoBoost,
     MoveDescription_DazzlingGleam,
     MoveDescription_PlayRough,
+    MoveDescription_DrainingKiss,
 };

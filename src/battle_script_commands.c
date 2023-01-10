@@ -542,6 +542,7 @@ static void atkF4_subattackerhpbydmg(void);
 static void atkF5_removeattackerstatus1(void);
 static void atkF6_finishaction(void);
 static void atkF7_finishturn(void);
+static void atkF8_negativedamagedrainingkiss(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -793,6 +794,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     atkF5_removeattackerstatus1,
     atkF6_finishaction,
     atkF7_finishturn,
+    atkF8_negativedamagedrainingkiss,
 };
 
 struct StatFractions
@@ -9695,4 +9697,12 @@ static void atkF7_finishturn(void)
 {
     gCurrentActionFuncId = 0xC;
     gCurrentTurnActionNumber = gBattlersCount;
+}
+
+static void atkF8_negativedamagedrainingkiss(void)
+{
+    gBattleMoveDamage = -((gHpDealt / 4) * 3);
+    if (gBattleMoveDamage == 0)
+        gBattleMoveDamage = -1;
+    gBattlescriptCurrInstr++;
 }

@@ -226,6 +226,7 @@ gBattleScriptsForMoveEffects:: @ 81D6BBC
 	.4byte BattleScript_EffectCalmMind
 	.4byte BattleScript_EffectDragonDance
 	.4byte BattleScript_EffectCamouflage
+	.4byte BattleScript_EffectDrainingKiss
 
 BattleScript_EffectHit: @ 81D6F14
 BattleScript_EffectAccuracyDown2: @ 81D6F14
@@ -2929,6 +2930,48 @@ BattleScript_EffectCamouflage: @ 81D8C43
 	waitanimation
 	printstring BATTLE_TEXT_TypeTransform
 	waitmessage 64
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectDrainingKiss:
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation TARGET
+	waitstate
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	critmessage
+	waitmessage 64
+	resultmessage
+	waitmessage 64
+	negativedamagedrainingkiss
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	jumpifability TARGET, ABILITY_LIQUID_OOZE, BattleScript_DrainingKissLiquidOoze
+	setbyte cMULTISTRING_CHOOSER, 0
+	goto BattleScript_DrainingKissUpdateHp
+
+BattleScript_DrainingKissLiquidOoze: @ 81D7037
+	manipulatedamage 0
+	setbyte cMULTISTRING_CHOOSER, 1
+
+BattleScript_DrainingKissUpdateHp: @ 81D703F
+	healthbarupdate USER
+	datahpupdate USER
+	jumpifmovehadnoeffect BattleScript_DrainingKissTryFainting
+	printfromtable gLeechSeedDrainStringIds
+	waitmessage 64
+
+BattleScript_DrainingKissTryFainting: @ 81D7056
+	tryfaintmon USER, FALSE, NULL
+	tryfaintmon TARGET, FALSE, NULL
 	goto BattleScript_MoveEnd
 
 BattleScript_FaintAttacker:: @ 81D8C58
