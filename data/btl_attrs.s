@@ -402,4 +402,5 @@ gSoundMovesTable:: @ 81FA724
 	.2byte  0x13F
 	.2byte  0x140
 	.2byte  0x130
+	.2byte  0x166 @ MOVE_INTENSE_VOICE
 	.2byte 0xFFFF

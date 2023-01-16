@@ -376,6 +376,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_DAZZLING_GLEAM
 	.4byte Move_PLAY_ROUGH
 	.4byte Move_DRAINING_KISS
+	.4byte Move_INTENSE_VOICE
 	.4byte PoundCopy
 
 	.align 2
@@ -9929,6 +9930,9 @@ Move_PLAY_ROUGH:
 
 Move_DRAINING_KISS:
 	goto Move_ABSORB
+
+Move_INTENSE_VOICE:
+	goto Move_HYPER_VOICE
 
 PoundCopy: @ 81D5C05
 	loadspritegfx ANIM_TAG_IMPACT

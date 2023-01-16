@@ -1425,6 +1425,10 @@ static const u8 MoveDescription_DrainingKiss[] = _(
     "An attack that absorbs over\n"
     "half the damage inflicted.");
 
+static const u8 MoveDescription_IntenseVoice[] = _(
+    "Does emotional damage with\n"
+    "a cry that never misses.");
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -1783,4 +1787,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_DazzlingGleam,
     MoveDescription_PlayRough,
     MoveDescription_DrainingKiss,
+    MoveDescription_IntenseVoice,
 };

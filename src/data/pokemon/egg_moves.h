@@ -578,7 +578,8 @@ const u16 gEggMoves[] = {
               MOVE_ENCORE,
               MOVE_DOUBLE_SLAP,
               MOVE_WISH,
-              MOVE_CHARGE),
+              MOVE_CHARGE,
+              MOVE_INTENSE_VOICE),
 
     egg_moves(CLEFFA,
               MOVE_PRESENT,
@@ -1219,7 +1220,8 @@ const u16 gEggMoves[] = {
               MOVE_SNORE,
               MOVE_SWAGGER,
               MOVE_EXTRASENSORY,
-              MOVE_SMELLING_SALT),
+              MOVE_SMELLING_SALT,
+              MOVE_INTENSE_VOICE),
 
     egg_moves(CLAMPERL,
               MOVE_REFRESH,

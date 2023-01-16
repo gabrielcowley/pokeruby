@@ -488,6 +488,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM52_PLAY_ROUGH)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -515,6 +516,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM52_PLAY_ROUGH)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -902,6 +904,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM52_PLAY_ROUGH)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
 
@@ -939,6 +942,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM52_PLAY_ROUGH)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
 
@@ -2710,6 +2714,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_DAZZLING_GLEAM)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -3686,6 +3691,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM52_PLAY_ROUGH)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM03_SURF)
@@ -4195,6 +4201,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM52_PLAY_ROUGH)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_CLEFFA]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
@@ -4251,6 +4258,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM52_PLAY_ROUGH)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_TOGEPI]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
@@ -4478,6 +4486,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM52_PLAY_ROUGH)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -4506,6 +4515,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM52_PLAY_ROUGH)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -5882,6 +5892,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_DAZZLING_GLEAM)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8101,6 +8112,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM52_PLAY_ROUGH)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM02_FLY)),
 
     [SPECIES_ALTARIA]     = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
@@ -8130,6 +8142,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM52_PLAY_ROUGH)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -8982,6 +8995,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_KIRLIA]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
@@ -9011,6 +9025,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_GARDEVOIR]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
@@ -9041,6 +9056,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(TM51_DAZZLING_GLEAM)
                                         | TMHM(TM53_DRAINING_KISS)
+                                        | TMHM(TM54_INTENSE_VOICE)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_BAGON]       = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
