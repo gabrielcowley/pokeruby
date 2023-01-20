@@ -358,4 +358,5 @@ const u8 gMoveNames[][14] = {
     [MOVE_PLAY_ROUGH] = _("PLAY ROUGH"),
     [MOVE_DRAINING_KISS] = _("DRAININGKISS"),
     [MOVE_INTENSE_VOICE] = _("INTENSEVOICE"),
+    [MOVE_MOONBLAST] = _("MOONBLAST"),
 };

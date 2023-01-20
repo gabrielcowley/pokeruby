@@ -377,6 +377,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_PLAY_ROUGH
 	.4byte Move_DRAINING_KISS
 	.4byte Move_INTENSE_VOICE
+	.4byte Move_MOONBLAST
 	.4byte PoundCopy
 
 	.align 2
@@ -9933,6 +9934,37 @@ Move_DRAINING_KISS:
 
 Move_INTENSE_VOICE:
 	goto Move_HYPER_VOICE
+
+Move_MOONBLAST:
+	loadspritegfx ANIM_TAG_MOON
+	loadspritegfx ANIM_TAG_YELLOW_STAR
+	loadspritegfx ANIM_TAG_IMPACT
+	setalpha 0, 16
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 1, 1, 0, 16, rgb(0, 0, 0)
+	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_83D6FC8, ANIM_BATTLER_ATTACKER, 2, 120, 56
+	createvisualtask sub_8079670, 3, 0, 16, 16, 0, 1
+	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
+	createsprite gSwiftStarSpriteTemplate, ANIM_BATTLER_TARGET, 3, 20, -10, 20, 0, 22, 20, 1
+	delay 5
+	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
+	createsprite gSwiftStarSpriteTemplate, ANIM_BATTLER_TARGET, 3, 20, -10, 20, 5, 22, -18, 1
+	delay 5
+	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
+	createsprite gSwiftStarSpriteTemplate, ANIM_BATTLER_TARGET, 3, 20, -10, 20, -10, 22, 15, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_TARGET, 2, 0, 18, 1
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BATTLER_DEF_PARTNER, 2, 0, 18, 1
+	delay 5
+	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
+	createsprite gSwiftStarSpriteTemplate, ANIM_BATTLER_TARGET, 3, 20, -10, 20, 0, 22, -20, 1
+	delay 5
+	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
+	createsprite gSwiftStarSpriteTemplate, ANIM_BATTLER_TARGET, 3, 20, -10, 20, 0, 22, 12, 1
+	delay 5
+	createvisualtask sub_80CE3EC, 2
+	waitforvisualfinish
+	blendoff
+	end
 
 PoundCopy: @ 81D5C05
 	loadspritegfx ANIM_TAG_IMPACT

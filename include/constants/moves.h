@@ -360,7 +360,8 @@
 #define MOVE_PLAY_ROUGH 356
 #define MOVE_DRAINING_KISS 357
 #define MOVE_INTENSE_VOICE 358 // Disarming Voice is too long a name
+#define MOVE_MOONBLAST 359
 
-#define NUM_MOVES 359
+#define NUM_MOVES 360
 
 #endif  // GUARD_CONSTANTS_MOVES_H

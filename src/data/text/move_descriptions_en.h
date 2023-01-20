@@ -1430,6 +1430,10 @@ static const u8 MoveDescription_IntenseVoice[] = _(
     "Does emotional damage with\n"
     "a cry that never misses.");
 
+static const u8 MoveDescription_Moonblast[] = _(
+    "Borrows the power of the\n"
+    "moon to attack.");
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -1789,4 +1793,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_PlayRough,
     MoveDescription_DrainingKiss,
     MoveDescription_IntenseVoice,
+    MoveDescription_Moonblast,
 };

@@ -4312,5 +4312,17 @@ const struct BattleMove gBattleMoves[] = {
         .priority = 0,
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_AFFECTED_BY_PROTECT,
     },
+    
+    [MOVE_MOONBLAST] = {
+        .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
+        .power = 95,
+        .type = TYPE_FAIRY,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+    },
 
 };
