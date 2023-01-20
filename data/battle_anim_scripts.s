@@ -378,6 +378,7 @@ gBattleAnims_Moves:: @ 81C7168
 	.4byte Move_DRAINING_KISS
 	.4byte Move_INTENSE_VOICE
 	.4byte Move_MOONBLAST
+	.4byte Move_FAIRY_WIND
 	.4byte PoundCopy
 
 	.align 2
@@ -9963,6 +9964,26 @@ Move_MOONBLAST:
 	delay 5
 	createvisualtask sub_80CE3EC, 2
 	waitforvisualfinish
+	blendoff
+	end
+
+Move_FAIRY_WIND:
+	loadspritegfx ANIM_TAG_GUST
+	loadspritegfx ANIM_TAG_DEVIL
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_BATTLER_DEF_PARTNER
+	monbgprio_28 1
+	setalpha 12, 8
+	playsewithpan SE_M_GUST, SOUND_PAN_TARGET
+	createsprite gBattleAnimSpriteTemplate_83DA380, ANIM_BATTLER_ATTACKER, 2, 0, -16
+	createsprite gBattleAnimSpriteTemplate_83D7C00, ANIM_BATTLER_TARGET, 2, 0, -24
+	createvisualtask sub_80DA09C, 5, 1, 70
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon2, 5, 1, 1, 0, 7, 1
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_BATTLER_ATTACKER, 2, 0, 0, 1, 2
+	playsewithpan SE_M_GUST2, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_BATTLER_DEF_PARTNER
 	blendoff
 	end
 

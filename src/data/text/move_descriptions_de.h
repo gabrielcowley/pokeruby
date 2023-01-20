@@ -1433,6 +1433,10 @@ static const u8 MoveDescription_Moonblast[] = _(
     "Borrows the power of the\n"
     "moon to attack.");
 
+static const u8 MoveDescription_FairyWind[] = _(
+    "Stirs up a fairy wind and\n"
+    "strikes the target with it.");
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -1793,4 +1797,5 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_DrainingKiss,
     MoveDescription_IntenseVoice,
     MoveDescription_Moonblast,
+    MoveDescription_FairyWind,
 };
