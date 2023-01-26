@@ -118,8 +118,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt8[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt9[] = {
     {
 	.iv = 0,
-	.level = 9,
+	.level = 11,
 	.species = SPECIES_POOCHYENA
+    },
+	{
+	.iv = 0,
+	.level = 11,
+	.species = SPECIES_CARVANHA
     }
 };
 
@@ -8215,8 +8220,13 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt35[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Grunt36[] = {
     {
 	.iv = 0,
-	.level = 9,
+	.level = 11,
 	.species = SPECIES_POOCHYENA
+    },
+	{
+	.iv = 0,
+	.level = 11,
+	.species = SPECIES_NUMEL
     }
 };
 
@@ -8763,33 +8773,18 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Rick[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Lyle[] = {
     {
 	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
+	.level = 10,
+	.species = SPECIES_VENONAT
     },
     {
 	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
+	.level = 10,
+	.species = SPECIES_BEAUTIFLY
     },
     {
 	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
-    },
-    {
-	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
-    },
-    {
-	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
-    },
-    {
-	.iv = 0,
-	.level = 3,
-	.species = SPECIES_WURMPLE
+	.level = 10,
+	.species = SPECIES_DUSTOX
     }
 };
 
@@ -8848,70 +8843,100 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Kent[] = {
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_James1[] = {
     {
 	.iv = 0,
-	.level = 8,
+	.level = 10,
 	.species = SPECIES_NINCADA
+    },
+	{
+	.iv = 0,
+	.level = 10,
+	.species = SPECIES_BUTTERFREE
+    },
+	{
+	.iv = 0,
+	.level = 10,
+	.species = SPECIES_SURSKIT
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_James2[] = {
     {
-	.iv = 10,
-	.level = 27,
-	.species = SPECIES_NINJASK
+	.iv = 0,
+	.level = 13,
+	.species = SPECIES_NINCADA
+    },
+	{
+	.iv = 0,
+	.level = 13,
+	.species = SPECIES_BUTTERFREE
+    },
+	{
+	.iv = 0,
+	.level = 13,
+	.species = SPECIES_SURSKIT
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_James3[] = {
     {
-	.iv = 20,
-	.level = 29,
-	.species = SPECIES_DUSTOX
+	.iv = 0,
+	.level = 16,
+	.species = SPECIES_NINCADA
     },
-    {
-	.iv = 20,
-	.level = 29,
-	.species = SPECIES_NINJASK
+	{
+	.iv = 0,
+	.level = 16,
+	.species = SPECIES_BUTTERFREE
+    },
+	{
+	.iv = 0,
+	.level = 16,
+	.species = SPECIES_SURSKIT
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_James4[] = {
     {
-	.iv = 30,
-	.level = 31,
-	.species = SPECIES_SURSKIT
-    },
-    {
-	.iv = 30,
-	.level = 31,
-	.species = SPECIES_DUSTOX
-    },
-    {
-	.iv = 30,
-	.level = 31,
+	.iv = 0,
+	.level = 35,
 	.species = SPECIES_NINJASK
+    },
+	{
+	.iv = 0,
+	.level = 35,
+	.species = SPECIES_SHEDINJA
+    },
+	{
+	.iv = 0,
+	.level = 35,
+	.species = SPECIES_MASQUERAIN
+    },
+	{
+	.iv = 0,
+	.level = 35,
+	.species = SPECIES_BUTTERFREE
     }
 };
 
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_James5[] = {
     {
-	.iv = 40,
-	.level = 33,
-	.species = SPECIES_SURSKIT
-    },
-    {
-	.iv = 40,
-	.level = 33,
+	.iv = 0,
+	.level = 75,
 	.species = SPECIES_NINJASK
     },
-    {
-	.iv = 40,
-	.level = 33,
-	.species = SPECIES_DUSTOX
+	{
+	.iv = 0,
+	.level = 75,
+	.species = SPECIES_SHEDINJA
     },
-    {
-	.iv = 40,
-	.level = 33,
-	.species = SPECIES_NINJASK
+	{
+	.iv = 0,
+	.level = 75,
+	.species = SPECIES_MASQUERAIN
+    },
+	{
+	.iv = 0,
+	.level = 75,
+	.species = SPECIES_BUTTERFREE
     }
 };
 
