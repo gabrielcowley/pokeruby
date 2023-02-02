@@ -9,7 +9,7 @@
   "map_type": "MAP_TYPE_INDOOR",
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE",
@@ -21,7 +21,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgCity_PokemonCenter_1F_EventScript_155213",
+      "script": "PetalburgCity_PokemonCenter_1F_EventScript_PkmnCenterNurse",
       "flag": "0"
     },
     {
@@ -47,7 +47,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgCity_PokemonCenter_1F_EventScript_155221",
+      "script": "PetalburgCity_PokemonCenter_1F_EventScript_FatMan",
       "flag": "0"
     },
     {
@@ -60,7 +60,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgCity_PokemonCenter_1F_EventScript_15522A",
+      "script": "PetalburgCity_PokemonCenter_1F_EventScript_Youngster",
       "flag": "0"
     },
     {
@@ -73,7 +73,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgCity_PokemonCenter_1F_EventScript_155233",
+      "script": "PetalburgCity_PokemonCenter_1F_EventScript_Woman",
       "flag": "0"
     }
   ],
@@ -100,6 +100,10 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }
