@@ -25,6 +25,8 @@ Install the **devkitARM** toolchain of [devkitPro](https://devkitpro.org/wiki/Ge
 #### Mac OS X
 It is highly recommended that you use the [Homebrew](https://brew.sh) package manager. Suggested packages include `gcc`, `libpng`, `coreutils`, `git`, `make`, and `md5sha1sum`. Note that `make` will be aliased as `gmake` in Terminal, and `gcc` as `gcc-${VM}` where `${VM}` is the GCC major version (currently 9).
 
+If you have installed `libpng` via Homebrew and you're using an ARM-based system, you need to append `-I /opt/homebrew/include/ -L /opt/homebrew/lib/` to the `CFLAGS` or `CXXFLAGS` assignments in the Makefiles for `rsfont`, `preproc` and `gbagfx`.
+
 # Installation
 
 To set up the repository:
