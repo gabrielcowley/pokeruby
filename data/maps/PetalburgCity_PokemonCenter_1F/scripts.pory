@@ -32,12 +32,8 @@ script PetalburgCity_PokemonCenter_1F_EventScript_Woman {
 		end
 	}
 	msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_BeforeBattle)
-	msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_BeforeBattle_BattleChoice, MSGBOX_YESNO)
-	if (var(VAR_RESULT) == 0) {
-		msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_DeclinedBattleOrPokemon)
-		release
-		end
-	}
+	bufferstring(0, PetalburgCity_PokemonCenter_1F_Text_Woman_BeforeBattle_BattleChoice)
+	call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_OfferChoice)
 	trainerbattle_no_intro(TRAINER_BIANCA, PetalburgCity_PokemonCenter_1F_Text_Woman_WonBattle)
 	msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_Preamble)
 	setvar(VAR_KANTO_STARTERS_STATE, 1)
@@ -47,61 +43,44 @@ script PetalburgCity_PokemonCenter_1F_EventScript_Woman {
 
 script PetalburgCity_PokemonCenter_1F_EventScript_Woman_AfterBattle {
 	if (var(VAR_KANTO_STARTERS_STATE) == 1) {
-		call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_CheckPartySize)
-		msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceiveBulbasaur, MSGBOX_YESNO)
-		if (var(VAR_RESULT) == 0) {
-			msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_DeclinedBattleOrPokemon)
-			release
-			end
-		} else {
-			playfanfare(MUS_OBTAIN_ITEM)
-			bufferspeciesname(1, SPECIES_BULBASAUR)
-			message(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceivedPokemon)
-			waitfanfare
-			waitmessage
-			givemon(SPECIES_BULBASAUR, 5, ITEM_NONE)
-			call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_OfferToNicknamePokemon)
-			setvar(VAR_KANTO_STARTERS_STATE, 2)
-		}
+		bufferstring(0, PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceiveBulbasaur)
+		setvar(VAR_TEMP_0, SPECIES_BULBASAUR)
+		call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_TryGiveMon)
 	}
 	if (var(VAR_KANTO_STARTERS_STATE) == 2) {
-		call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_CheckPartySize)
-		msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceiveCharmander, MSGBOX_YESNO)
-		if (var(VAR_RESULT) == 0) {
-			msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_DeclinedBattleOrPokemon)
-			release
-			end
-		} else {
-			playfanfare(MUS_OBTAIN_ITEM)
-			bufferspeciesname(1, SPECIES_CHARMANDER)
-			message(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceivedPokemon)
-			waitfanfare
-			waitmessage
-			givemon(SPECIES_CHARMANDER, 5, ITEM_NONE)
-			call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_OfferToNicknamePokemon)
-			setvar(VAR_KANTO_STARTERS_STATE, 3)
-		}
+		bufferstring(0, PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceiveCharmander)
+		setvar(VAR_TEMP_0, SPECIES_CHARMANDER)
+		call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_TryGiveMon)
 	}
 	if (var(VAR_KANTO_STARTERS_STATE) == 3) {
-		call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_CheckPartySize)
-		msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceiveSquirtle, MSGBOX_YESNO)
-		if (var(VAR_RESULT) == 0) {
-			msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_DeclinedBattleOrPokemon)
-			release
-			end
-		} else {
-			playfanfare(MUS_OBTAIN_ITEM)
-			bufferspeciesname(1, SPECIES_SQUIRTLE)
-			message(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceivedPokemon)
-			waitfanfare
-			waitmessage
-			givemon(SPECIES_SQUIRTLE, 5, ITEM_NONE)
-			call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_OfferToNicknamePokemon)
-			setvar(VAR_KANTO_STARTERS_STATE, 4)
-		}
+		bufferstring(0, PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceiveSquirtle)
+		setvar(VAR_TEMP_0, SPECIES_SQUIRTLE)
+		call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_TryGiveMon)
 	}
 	if (var(VAR_KANTO_STARTERS_STATE) == 4) {
 		msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_AllPokemonReceived)
+	}
+}
+
+script PetalburgCity_PokemonCenter_1F_EventScript_Woman_TryGiveMon {
+	call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_CheckPartySize)
+	call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_OfferChoice)
+	playfanfare(MUS_OBTAIN_ITEM)
+	bufferspeciesname(1, VAR_TEMP_0)
+	message(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_ReceivedPokemon)
+	waitfanfare
+	waitmessage
+	givemon(VAR_TEMP_0, 5, ITEM_NONE)
+	call(PetalburgCity_PokemonCenter_1F_EventScript_Woman_OfferToNicknamePokemon)
+	addvar(VAR_KANTO_STARTERS_STATE, 1)
+}
+
+script PetalburgCity_PokemonCenter_1F_EventScript_Woman_OfferChoice {
+	msgbox(gStringVar1, MSGBOX_YESNO)
+	if (var(VAR_RESULT) == 0) {
+		msgbox(PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_DeclinedBattleOrPokemon)
+		release
+		end
 	}
 }
 
