@@ -1078,6 +1078,7 @@ FallarborTown_ContestLobby_Text_1A10EB:: @ 81A10EB
 
 MossdeepCity_StevensHouse_Text_1A1102:: @ 81A1102
 RustboroCity_DevonCorp_2F_Text_1A1102:: @ 81A1102
+PetalburgCity_PokemonCenter_1F_Text_Woman_AfterBattle_GivePokemonNickname::
 	.string "Want to give a nickname to the\n"
 	.string "{STR_VAR_2} you received?$"
 

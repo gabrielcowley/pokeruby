@@ -10197,3 +10197,21 @@ const struct TrainerMonNoItemDefaultMoves gTrainerParty_Eugene[] = {
     }
 };
 
+const struct TrainerMonNoItemDefaultMoves gTrainerParty_Bianca[] = {
+    {
+	.iv = 0,
+	.level = 5,
+	.species = SPECIES_BULBASAUR
+    },
+    {
+	.iv = 0,
+	.level = 5,
+	.species = SPECIES_CHARMANDER
+    },
+    {
+	.iv = 0,
+	.level = 5,
+	.species = SPECIES_SQUIRTLE
+    }
+};
+
