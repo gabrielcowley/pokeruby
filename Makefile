@@ -334,7 +334,7 @@ include json_data_rules.mk
 %.rl:     %     ; $(GBAGFX) $< $@ $(GFX_OPTS)
 
 data/%.inc: data/%.pory
-	$(SCRIPT) -i $< -o $@ -fw tools/poryscript/font_widths.json
+	$(SCRIPT) -i $< -o $@ -fc tools/poryscript/font_config.json
 
 #### Sound Rules ####
 
